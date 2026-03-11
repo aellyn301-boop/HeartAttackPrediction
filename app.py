@@ -3,8 +3,8 @@ import joblib
 import numpy as np
 import pandas as pd
 
-scaler = joblib.load("artifacts/preprocessor.pkl")
-model = joblib.load("artifacts/model.pkl")
+scaler = joblib.load("preprocessor.pkl")
+model = joblib.load("model.pkl")
 
 def main():
     st.title('Heart Attack Prediction')
@@ -44,4 +44,5 @@ def make_prediction(input_data):
     return prediction[0]
 
 if __name__ == '__main__':
+
     main()
